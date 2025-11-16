@@ -18,7 +18,7 @@
 
 ## 2. How to Run (Docker - Recommended Method)
 
-This is the recommended way to run the project for a demo or grading. It guarantees a consistent environment and bypasses any local platform (e.g., Windows) issues.
+This is the recommended way to run the project for a demo or grading.
 
 ### Prerequisites
 1.  **Docker Desktop** must be installed and running.
@@ -39,9 +39,13 @@ docker build -t my-go-server .
 ```
 
 ### Step 2: Run the Containers
-# 1. Start the http_server on port 8080
+#### 1. Start the http_server on port 8080
+```powershell
 docker run -d -p 8080:8080 --name http-server lab1-webServer
+```
 
-# 2. Start the proxy on port 9090
+#### 2. Start the proxy on port 9090
+```powershell
 #    We override the default CMD in the Dockerfile to run the proxy
 docker run -d -p 9090:9090 --name http-proxy lab1-webServer ./proxy 9090
+```
