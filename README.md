@@ -49,3 +49,13 @@ docker run -d -p 8080:8080 --name http-server go-webserver
 #    We override the default CMD in the Dockerfile to run the proxy
 docker run -d -p 9090:9090 --name http-proxy go-webserver ./proxy 9090
 ```
+
+#### 3. Server test
+```powershell
+curl -Method GET http://localhost:8080/index.html
+```
+
+#### 4. Proxy test
+```powershell
+curl -Method GET http://localhost:8080/index.html -Proxy http://localhost:9090
+```
