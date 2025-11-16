@@ -41,11 +41,11 @@ docker build -t go-webserver .
 ### Step 2: Run the Containers
 #### 1. Start the http_server on port 8080
 ```powershell
-docker run -d -p 8080:8080 --name http-server lab1-webServer
+docker run -d -p 8080:8080 --name http-server go-webserver
 ```
 
 #### 2. Start the proxy on port 9090
 ```powershell
 #    We override the default CMD in the Dockerfile to run the proxy
-docker run -d -p 9090:9090 --name http-proxy lab1-webServer ./proxy 9090
+docker run -d -p 9090:9090 --name http-proxy go-webserver ./proxy 9090
 ```
