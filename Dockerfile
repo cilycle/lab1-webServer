@@ -16,7 +16,6 @@ COPY --from=builder /app/http_server .
 COPY --from=builder /app/proxy .
 
 COPY index.html .
-COPY newfile.txt . 
 
 
 EXPOSE 8080
