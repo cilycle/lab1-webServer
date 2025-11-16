@@ -1,0 +1,6 @@
+*.exe
+http_server
+proxy
+
+.DS_Store
+.vscode/
