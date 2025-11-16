@@ -35,7 +35,7 @@ In your PowerShell terminal, `cd` to the project directory and run:
 ```powershell
 # -t my-go-server gives the image a name (t = tag)
 # . (dot) tells Docker to find the Dockerfile in the current directory
-docker build -t my-go-server .
+docker build -t go-webserver .
 ```
 
 ### Step 2: Run the Containers
