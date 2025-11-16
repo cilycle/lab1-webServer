@@ -33,8 +33,6 @@ This is the recommended way to run the project for a demo or grading.
 In your PowerShell terminal, `cd` to the project directory and run:
 
 ```powershell
-# -t my-go-server gives the image a name (t = tag)
-# . (dot) tells Docker to find the Dockerfile in the current directory
 docker build -t go-webserver .
 ```
 
